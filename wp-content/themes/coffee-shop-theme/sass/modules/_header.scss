@@ -1,0 +1,108 @@
+.site-header {
+  .container {
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .site-header__mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        font-weight: 400;
+      }
+
+      .site-header__menu-triggers {
+        @media screen and (min-width: $breakpoint-lg) {
+          display: none;
+        }
+
+        .fa-search {
+          cursor: pointer;
+        }
+
+        .fa-bars {
+          margin-left: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .site-header__menu {
+      background: $black;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        display: flex;
+        background: $white;
+      }
+
+      .list {
+        @media screen and (min-width: $breakpoint-lg) {
+          display: flex;
+        }
+
+        li {
+          padding-top: 2rem;
+
+          @media screen and (min-width: $breakpoint-lg) {
+            padding: 1rem 3rem 0 0;
+          }
+
+          &.current-menu-item a {
+            color: $brown;
+          }
+        }
+      }
+
+      a {
+        color: $white;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          color: $black;
+        }
+      }
+    }
+
+    .site-header__util {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem 0 0 1.5rem;
+      }
+
+      .fa.fa-search {
+        display: none;
+        cursor: pointer;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          display: inline-block;
+        }
+      }
+
+      a {
+        padding: 0 0 2rem 2.5rem;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          padding: 0 0 0 1rem;
+        }
+      }
+
+      .site-header__avatar {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+
+        img {
+          width: 2rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}

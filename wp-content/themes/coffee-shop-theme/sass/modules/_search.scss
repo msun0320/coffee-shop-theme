@@ -1,0 +1,54 @@
+body {
+    position: relative;
+}
+
+.search-overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 1rem;
+    display: none;
+    color: $white;
+
+    &--active {
+        display: block;
+    }
+
+    &__top {
+        display: flex;
+    }
+
+    .search-term {
+        width: 80%;
+        height: 2rem;
+    }
+
+    &__icon {
+        padding: 0.7rem;
+        color: $white;
+        background: $brown;
+    }
+
+    &__close {
+        padding: 0.7rem;
+        color: $white;
+        cursor: pointer;
+    }
+
+    a {
+        color: $brown;
+    }
+
+    .search-result__coffee {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 5rem;
+            border-radius: 50%;
+        }
+    }
+}

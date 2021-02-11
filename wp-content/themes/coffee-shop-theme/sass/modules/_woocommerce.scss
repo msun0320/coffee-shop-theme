@@ -1,0 +1,41 @@
+.site-main {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#sidebar {
+    display: none;
+}
+
+.woocommerce .quantity .qty {
+    height: 1.8rem;
+}
+
+.woocommerce div.product form.cart .button,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+    background: $brown;
+
+    &:hover {
+        background: $brown-light;
+    }
+}
+
+.product_meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce-info,
+.woocommerce-message {
+    border-top-color: $brown;
+}
+
+.woocommerce ul.products li.product .price, 
+.woocommerce-message::before, 
+.woocommerce-info::before,
+.woocommerce div.product p.price, .woocommerce div.product span.price,
+.woocommerce div.product .stock {
+    color: $brown;
+}

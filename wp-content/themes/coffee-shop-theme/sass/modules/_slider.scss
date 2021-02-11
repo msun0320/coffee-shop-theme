@@ -1,0 +1,123 @@
+.hero-slider {
+  color: $white;
+
+  .slick-arrow {
+    z-index: 999;
+    display: none !important;
+
+    @media screen and (min-width: $breakpoint-md) {
+      display: inline-block !important;
+    }
+
+    &::before {
+      font-size: 3rem;
+    }
+
+    &.slick-prev {
+      left: 2rem;
+    }
+
+    &.slick-next {
+      @media screen and (min-width: $breakpoint-md) {
+        right: 4rem;
+      }
+    }
+  }
+
+  .hero-slider__slide {
+    position: relative;
+
+    .hero-slider__overlay {
+      position: absolute;
+      top: 25%;
+      right: 15%;
+
+      p {
+        font-size: 0.8rem;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.product-slider {
+  display: grid;
+  gap: 1rem;
+
+  .slick-list {
+    margin: 0 -1rem;
+
+    .slick-slide {
+      margin: 0 1rem;
+
+      .headline {
+        a:hover {
+          color: $brown;
+        }
+      }
+    }
+  }
+}
+
+.post-slider {
+  .slick-list {
+    margin: 0 -1rem;
+
+    .slick-slide {
+      margin: 0 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05),
+        0 6px 20px 0 rgba(0, 0, 0, 0.03);
+      background: $white;
+
+      img {
+        height: auto;
+      }
+
+      .recent-post__heading {
+        a:hover {
+          color: $brown;
+        }
+
+        .recent-post__info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          span {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: $brown;
+          }
+        }
+      }
+
+      hr {
+        width: 80%;
+      }
+
+      .recent-post__detail {
+        .recent-post__excerpt {
+          width: 70%;
+          margin: 1rem auto;
+          color: $gray;
+          line-height: 1.5rem;
+        }
+
+        a {
+          text-decoration: underline;
+          margin: 2rem;
+          display: inline-block;
+
+          &:hover {
+            color: $brown;
+          }
+        }
+      }
+    }
+  }
+}
